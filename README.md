@@ -19,10 +19,14 @@ DevOps ve Networking İçin  Linux Komutları [![Awesome](https://cdn.rawgit.com
 * [tcpdump Command](#tcpdump_command)
 * [sudo !! Command](#sudo_!!_command)
 * [wget Command](#wget_command)
-
-* [nslookup ve dig Commands](#nslookup_ve_dig_commands)
-* [tcpdump Command](#tcpdump_command)
-* [sudo !! Command](#sudo_!!_command)
+* [free Command](#free_command)
+* [tr Command](#tr_command)
+* [htop, ps ve kill Commands](#htop_ps_ve_kill_commands)
+* [head and tail Commands](#head_and_tail_commands)
+* [man Command](#man_command)
+* [sort Command](#sort_command)
+* [chown Command](#chown_command
+* [chmod Command](#chmod_command)
 
 <hr>
 
@@ -207,7 +211,7 @@ sudo tcpdump -i eth0 -c 10
 
 ## sudo !! Command
 
-##### Bu komut, komut satırında kendinden önce girilen komutu root izni ile tekrarlar.:
+##### Bu komut, komut satırında kendinden önce girilen komutu root izni ile tekrarlar:
 ```
 sudo !!
 ```
@@ -216,9 +220,145 @@ sudo !!
 
 ## wget Command
 
-##### Bu komut ile belirtilen web sayfası indirilir.:
+##### Bu komut ile belirtilen web sayfası indirilir:
 ```
 wget https://www.linkedin.com/in/mahmut-edip-negiz-6b1145213/
 ```
 
 <hr>
+
+## free Command
+
+##### diskin kullanım durumunu listeler:
+```
+free
+```
+
+##### bytes olarak listeler:
+```
+free -b
+```
+
+#####  kilobytes olarak listeler (default):
+```
+free -k
+```
+
+##### megabytes olarak listeler:
+```
+free -m
+```
+
+##### gigabytes olarak listeler:
+```
+free -g
+```
+
+<hr>
+
+## tr Command
+##### (tr komutu ile belirtilen dosyanın içinde manipülasyonlar yapılabilir. Pipeler | kullanılarak daha karmaşık scriptler yazılabilir.)
+
+##### deneme.txt içindeki tüm e’ler o olur:
+```
+cat deneme.txt | tr “e” “o” 
+```
+
+#####  deneme.txt içindeki tüm küçük harfler BÜYÜK olur:
+```
+cat deneme.txt | tr “[a-z]” “[A-Z]”
+```
+
+#####  deneme.txt içindeki tüm i’ler silinir:
+```
+cat deneme.txt | tr -d “i” 
+```
+
+<hr>
+
+## htop, ps ve kill Commands
+
+##### htop gerçek zamanlı olarak cpu ve memory kullanımını gösterir. ps komutunun aksine mouse ile etkileşimlidir:
+```
+htop
+```
+
+#####  ps komutu da cpu ve memory kullanımını gösterir, htop komutunundan farklı olarak çıktıyı rapor haline sunar:
+```
+ps aux
+
+a = Tüm kullanıcıların işlemlerini gösterir.
+u = İşlemin sahibini gösterir.
+x = Terminale bağlı olmayan işlemleri gösterir.
+```
+
+#####  kill komutu ile de bu ID’ler kullanılarak işlem sonlandırılır:
+```
+kill “ID”
+```
+
+<hr>
+
+## head and tail Commands
+
+##### Belgenin ilk on satırını çıkarır:
+```
+head “dosya.txt” 
+```
+
+##### Belgenin son on satırını çıkarır:
+```
+tail “dosya.txt”  
+```
+
+<hr>
+
+## head and tail Commands
+
+##### Bu komut diğer tüm komutların detaylı kullanımını açıklar:
+```
+man whoami
+```
+
+<hr>
+
+## sort Command
+##### (Bu komut ile hem alfabetik hem de numerik sıralama yapılır. Dosyaları, dosya içeriklerini ve dizinleri sıralar. Sıralamayı case sensitive olarak yapar.)
+
+##### Çıktıyı ters olarak sıralar:
+```
+sort -r
+```
+
+##### Çıktıyı case insensitive olarak sıralar:
+```
+sort -f 
+```
+
+##### Çıktıyı numerik olarak sıralar:
+```
+sort -n
+```
+
+<hr>
+
+## chown Command
+
+##### Dosyaların sahipliğini değiştirir:
+```
+sudo chown “kullanıcı_veya_grup_adı” “dosya_adı”
+```
+
+<hr>
+
+## chmod Command
+
+##### Bu komut, dosya ve dizinlerin erişim izinlerini değiştirmek için kullanılır. Her bir basamak user, group ve others kullanıcılılarını temsil eder:
+```
+chmod 754 “dosya.txt”
+
+4 →read(r) permission
+2 → write(w) permission
+1 → execute(x) permission
+0 → no permission
+```
