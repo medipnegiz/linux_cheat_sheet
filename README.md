@@ -25,7 +25,7 @@ DevOps ve Networking İçin  Linux Komutları [![Awesome](https://cdn.rawgit.com
 * [head and tail Commands](#head_and_tail_commands)
 * [man Command](#man_command)
 * [sort Command](#sort_command)
-* [chown Command](#chown_command
+* [chown Command](#chown_command)
 * [chmod Command](#chmod_command)
 
 <hr>
