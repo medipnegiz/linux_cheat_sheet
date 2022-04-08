@@ -6,11 +6,6 @@ Linux-Kommandos für DevOps und Netzwerke [![Awesome](https://cdn.rawgit.com/sin
 </p>
 <hr>
 
-# Andere verfügbare Sprachen:
-
-1. [German Linux Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-de.md)
-2. [Turkish Linux Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-tr.md)
-
 ### Index
 
 * [lsof Kommando](#lsof_kommando)
