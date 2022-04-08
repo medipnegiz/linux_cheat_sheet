@@ -88,7 +88,7 @@ id -g
 id -G
 ```
 
-##### aktuelle Benutzer-ID:
+##### Aktuelle Benutzer-ID:
 ```
 id -u 
 ```
@@ -230,27 +230,27 @@ wget https://www.linkedin.com/in/mahmut-edip-negiz-6b1145213/
 
 ## free Kommando
 
-##### listet den Nutzungsstatus der Festplatte auf:
+##### Listet den Nutzungsstatus der Festplatte auf:
 ```
 free
 ```
 
-##### listet den Festplattennutzungsstatus in Byte auf:
+##### Listet den Festplattennutzungsstatus in Byte auf:
 ```
 free -b
 ```
 
-#####  listet den Nutzungsstatus des Datenträgers in Kilobyte Byte auf (default):
+#####  Listet den Nutzungsstatus des Datenträgers in Kilobyte Byte auf (default):
 ```
 free -k
 ```
 
-##### listet den Festplattennutzungsstatus in Megabyte Byte auf:
+##### Listet den Festplattennutzungsstatus in Megabyte Byte auf:
 ```
 free -m
 ```
 
-##### listet den Festplattennutzungsstatus in Gigabyte Byte auf:
+##### Listet den Festplattennutzungsstatus in Gigabyte Byte auf:
 ```
 free -g
 ```
