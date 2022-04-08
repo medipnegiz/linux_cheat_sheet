@@ -27,7 +27,7 @@ Linux-Kommandos für DevOps und Netzwerke [![Awesome](https://cdn.rawgit.com/sin
 * [man Kommando](#man_kommando)
 * [sort Kommando](#sort_kommando)
 * [chown Kommando](#chown_kommando)
-* [chmod Command](#chmod_kommando)
+* [chmod Kommando](#chmod_kommando)
 
 <hr>
 
