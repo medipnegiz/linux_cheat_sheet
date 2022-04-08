@@ -132,11 +132,6 @@ diff “test-1.txt” “test-2.txt”
 dd if = /dev/mp1 of = /dev/mp2 
 ```
 
-##### Zeigt alle Commits an (nur Commit-Hash und Commit-Nachricht werden angezeigt):
-```
-$ git log --oneline
-```
-
 ##### Sollen die Fehler beim Kopiervorgang ignoriert werden, wird der Parameter conv=noerror angegeben:
 ```
 dd conv=noerror if = /dev/mp1 of = /dev/mp2
