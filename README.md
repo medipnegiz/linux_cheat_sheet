@@ -8,8 +8,8 @@ DevOps ve Networking İçin  Linux Komutları [![Awesome](https://cdn.rawgit.com
 
 # Other Available Languages:
 
-1. [German Linux Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-de.md)
-2. [Turkish Linux Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-tr.md)
+1. [German Linux Cheat Sheet](https://github.com/medipnegiz/linux_cheat_sheet/tree/main/other_sheet/linux_cheat_sheet_ge.md)
+2. [English Linux Cheat Sheet](https://github.com/medipnegiz/linux_cheat_sheet/tree/main/other_sheet/linux_cheat_sheet_en.md)
 
 ### Index
 * [lsof Komutu](#lsof_komutu)
