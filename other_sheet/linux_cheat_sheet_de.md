@@ -6,11 +6,6 @@ DevOps ve Networking İçin  Linux Komutları [![Awesome](https://cdn.rawgit.com
 </p>
 <hr>
 
-# Other Available Languages:
-
-4. [German Linux Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-de.md)
-10. [Turkish Linux Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-tr.md)
-
 ### Index
 * [lsof Command](#lsof_command)
 * [Groups and Users](#groups_and_users)
