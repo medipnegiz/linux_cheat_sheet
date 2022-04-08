@@ -41,7 +41,7 @@ Linux-Kommandos für DevOps und Netzwerke [![Awesome](https://cdn.rawgit.com/sin
 
 ##### Listet Dateien auf, die vom angegebenen Benutzer geöffnet wurden:
 ```
-lsof -u “user”
+lsof -u “Benutzer”
 ```
 
 <hr>
@@ -50,32 +50,32 @@ lsof -u “user”
 
 ##### Fügt einen neuen Benutzer hinzu:
 ```
-sudo useradd “username”
+sudo useradd “Nutzername”
 ```
 
 ##### Erstellt das Passwort des neuen Benutzers:
 ```
-sudo passwd “username” 
+sudo passwd “Nutzername” 
 ```
 
 ##### Löscht den angegebenen Benutzer:
 ```
-sudo userdel “username” 
+sudo userdel “Nutzername” 
 ```
 
 ##### Erstellt eine neue Gruppe:
 ```
-sudo groupadd “groupname” 
+sudo groupadd “Gruppenname” 
 ```
 
 ##### Löscht die angegebene Gruppe:
 ```
-sudo groupdel “groupname” 
+sudo groupdel “Gruppenname” 
 ```
 
 ##### Fügt den angegebenen Benutzer der angegebenen Gruppe hinzu:
 ```
-sudo usermod -g “groupname” “username” 
+sudo usermod -g “Gruppenname” “Nutzername” 
 ```
 
 <hr>
@@ -83,17 +83,17 @@ sudo usermod -g “groupname” “username”
 ## id Kommando
 ##### (Listet die numerischen IDs von Benutzern und Gruppen auf)
 
-##### Mevcut grup id:
+##### Aktuelle Gruppen-ID:
 ```
 id -g 
 ```
 
-##### Tüm grupların id’leri:
+##### IDs aller Gruppen:
 ```
 id -G
 ```
 
-##### Mevcut user id:
+##### aktuelle Benutzer-ID:
 ```
 id -u 
 ```
@@ -101,19 +101,19 @@ id -u
 <hr>
 
 ## cat Kommando
-##### (Bu komut ile belgeleri okuyabilir, değiştirirebilir ve birleştirebiliriz.)
+##### (Mit diesem Befehl können wir Dokumente lesen, ändern und zusammenführen)
 
-##### test-1.txt ve test-2.txt belgelerini birleştirerek çıktısını verir:
+##### Kombiniert die Dokumente test-1.txt und test-2.txt und dann gibt die Ausgabe:
 ```
 cat “test-1.txt” “test-2.txt” 
 ```
 
-##### Seçilen belgenenin tüm satırlarını numaralandırır:
+##### Nummeriert alle Zeilen des ausgewählten Dokuments:
 ```
 cat -b 
 ```
 
-##### Seçilen belgenin boş olmayan satırlarını da numaralandırır:
+##### Nummeriert auch die nicht leeren Zeilen des ausgewählten Dokuments:
 ```
 cat -n 
 ```
@@ -122,7 +122,7 @@ cat -n
 
 ## diff Kommando
 
-##### Bu komut iki dosya arasındaki farkları listeler:
+##### Dieser Befehl listet die Unterschiede zwischen den beiden Dateien auf:
 ```
 diff “test-1.txt” “test-2.txt”
 ```
@@ -130,19 +130,19 @@ diff “test-1.txt” “test-2.txt”
 <hr>
 
 ## dd Kommando
-##### (Bu komut belirtilen belge ve ya dizini belirtilen hedefe kopyalar. cpden farklı olarak byte-to-byte kopyalama işlemi yapar. Örneğin bir diskin başka bir diske kopyalamasını yaparken diskin tam bir replikasını oluşturur.(AWS snapshot gibi) Backup almakta kullanışlıdır.)
+##### (Dieser Befehl kopiert das angegebene Dokument oder Verzeichnis an das angegebene Ziel. Im Gegensatz zu cp kopiert es Byte-zu-Byte. Wenn Sie beispielsweise eine Festplatte auf eine andere Festplatte kopieren, wird eine exakte Kopie der Festplatte erstellt (wie ein AWS-Snapshot).)
 
-##### Mountpoint1 diskini olduğu gibi Mountpoint2 diskine kopyalar:
+##### Kopiert Mp1-Disc auf Mp2-Disc wie sie ist:
 ```
 dd if = /dev/mp1 of = /dev/mp2 
 ```
 
-##### Tüm commitleri görüntüler(Sadece commit hash ve commit mesajı görüntülenir.):
+##### Zeigt alle Commits an (nur Commit-Hash und Commit-Nachricht werden angezeigt):
 ```
 $ git log --oneline
 ```
 
-##### Eğer kopyalama işlemindeki hatalar gözardı edilmek isteniyorsa conv=noerror parametresi verilir:
+##### Sollen die Fehler beim Kopiervorgang ignoriert werden, wird der Parameter conv=noerror angegeben:
 ```
 dd conv=noerror if = /dev/mp1 of = /dev/mp2
 ```
@@ -151,12 +151,12 @@ dd conv=noerror if = /dev/mp1 of = /dev/mp2
 
 ## route Kommando
 
-##### Bulunduğumuz ağın route table bilgilerini listeler:
+##### Listet die Routing-Tabelleninformationen des aktuellen Netzwerks auf:
 ```
 route
 ```
 
-##### ICMP protokolünü kullanarak belirtilen hedefe gönderilen paketin kaç atlamada hedefe ulaştığını gösterir.:
+##### Gibt an, wie viele Hops das Paket, das mit dem ICMP-Protokoll an das angegebene Ziel gesendet wurde, das Ziel erreicht:
 ```
 traceroute google.com
 ```
@@ -164,23 +164,23 @@ traceroute google.com
 <hr>
 
 ## mtr Kommando
-##### (mtr komutu ping ve traceroute komutlarını kombine eder. Gerçek zamanlı olarak gönderilen pakette gerçekleşen veri kayıplarını ve geçikme sürelerini detaylı olarak listeler.)
+##### (Der Befehl mtr kombiniert die Befehle ping und traceroute. Es listet detailliert die Datenverluste und Verzögerungszeiten im gesendeten Paket in Echtzeit auf)
 
-##### Gerçek zamanlı olarak listeler:
+##### Listen in Echtzeit:
 ```
 mtr google.com 
 ```
 
-##### Hedefe sadece 10 paket atarak sonucu rapor halinde listeler. "-n" parametresi DNS çözümlemesini engeller.:
+##### Es wirft nur 10 Pakete auf das Ziel und listet das Ergebnis als Bericht auf. Der Parameter „-n“ blockiert die DNS-Auflösung:
 ```
 mtr -n --report google.com
 ```
 
 <hr>
 
-## nslookup ve dig Commands
+## nslookup ve dig Kommandos
 
-##### Belirtilen adresin NS ve SOA kayıtlarını sıralar:
+##### Sortiert die NS- und SOA-Einträge der angegebenen Adresse:
 ```
 nslookup github.com
 ```
@@ -191,24 +191,24 @@ dig google.com
 <hr>
 
 ## tcpdump Kommando
-##### (Makinada bulunan tüm network interface’lerin durumunu sorgular ve interfacelerden gönderilen paketleri yakalar.)
+##### (Es fragt den Status aller Netzwerkschnittstellen auf dem Computer ab und erfasst die von den Schnittstellen gesendeten Pakete)
 
-##### Tüm arayüzleri listeler:
+##### Listet alle Schnittstellen auf:
 ```
 sudo tcpdump --list-interfaces
 ```
 
-##### Tüm arayüzlerin paket iletimini dinler:
+##### Hört auf Paketübertragung aller Schnittstellen:
 ```
 sudo tcpdump
 ```
 
-##### Belirtilen arayüzün paket iletimini dinler:
+##### Hört auf Paketübertragung der angegebenen Schnittstelle:
 ```
 sudo tcpdump -i eth0
 ```
 
-##### Paket dinleme işlemini 10 ile sınırlar:
+##### Beschränkt das Abhören von Paketen auf 10:
 ```
 sudo tcpdump -i eth0 -c 10 
 ```
@@ -217,7 +217,7 @@ sudo tcpdump -i eth0 -c 10
 
 ## sudo !! Kommando
 
-##### Bu komut, komut satırında kendinden önce girilen komutu root izni ile tekrarlar:
+##### Dieser Befehl wiederholt den davor auf der Kommandozeile eingegebenen Befehl mit Root-Berechtigung:
 ```
 sudo !!
 ```
@@ -226,7 +226,7 @@ sudo !!
 
 ## wget Kommando
 
-##### Bu komut ile belirtilen web sayfası indirilir:
+##### Mit diesem Befehl wird die angegebene Webseite heruntergeladen.:
 ```
 wget https://www.linkedin.com/in/mahmut-edip-negiz-6b1145213/
 ```
@@ -235,27 +235,27 @@ wget https://www.linkedin.com/in/mahmut-edip-negiz-6b1145213/
 
 ## free Kommando
 
-##### diskin kullanım durumunu listeler:
+##### listet den Nutzungsstatus der Festplatte auf:
 ```
 free
 ```
 
-##### bytes olarak listeler:
+##### listet den Festplattennutzungsstatus in Byte auf:
 ```
 free -b
 ```
 
-#####  kilobytes olarak listeler (default):
+#####  listet den Nutzungsstatus des Datenträgers in Kilobyte Byte auf (default):
 ```
 free -k
 ```
 
-##### megabytes olarak listeler:
+##### listet den Festplattennutzungsstatus in Megabyte Byte auf:
 ```
 free -m
 ```
 
-##### gigabytes olarak listeler:
+##### listet den Festplattennutzungsstatus in Gigabyte Byte auf:
 ```
 free -g
 ```
@@ -263,65 +263,65 @@ free -g
 <hr>
 
 ## tr Kommando
-##### (tr komutu ile belirtilen dosyanın içinde manipülasyonlar yapılabilir. Pipeler | kullanılarak daha karmaşık scriptler yazılabilir.)
+##### (Innerhalb der mit dem tr-Befehl angegebenen Datei können Manipulationen vorgenommen werden. Rohre | Komplexere Skripte können mit geschrieben werden)
 
-##### deneme.txt içindeki tüm e’ler o olur:
+##### Alle e's in test.txt werden o sein:
 ```
-cat deneme.txt | tr “e” “o” 
-```
-
-#####  deneme.txt içindeki tüm küçük harfler BÜYÜK olur:
-```
-cat deneme.txt | tr “[a-z]” “[A-Z]”
+cat test.txt | tr “e” “o” 
 ```
 
-#####  deneme.txt içindeki tüm i’ler silinir:
+#####  Alle Kleinbuchstaben in test.txt werden GROSS geschrieben:
 ```
-cat deneme.txt | tr -d “i” 
+cat test.txt | tr “[a-z]” “[A-Z]”
+```
+
+#####  Alle i's in test.txt werden gelöscht:
+```
+cat test.txt | tr -d “i” 
 ```
 
 <hr>
 
-## htop, ps ve kill Commands
+## htop, ps ve kill Kommandos
 
-##### htop gerçek zamanlı olarak cpu ve memory kullanımını gösterir. ps komutunun aksine mouse ile etkileşimlidir:
+##### htop zeigt die CPU- und Speicherauslastung in Echtzeit an. Anders als der Befehl ps ist er interaktiv mit der Maus:
 ```
 htop
 ```
 
-#####  ps komutu da cpu ve memory kullanımını gösterir, htop komutunundan farklı olarak çıktıyı rapor haline sunar:
+#####  Der Befehl ps zeigt auch die CPU- und Speicherauslastung an, im Gegensatz zum Befehl htop meldet er die Ausgabe.:
 ```
 ps aux
 
-a = Tüm kullanıcıların işlemlerini gösterir.
-u = İşlemin sahibini gösterir.
-x = Terminale bağlı olmayan işlemleri gösterir.
+a = Zeigt die Transaktionen aller Benutzer an.
+u = Zeigt den Eigentümer der Aktion an.
+x = Zeigt Prozesse an, die nicht mit dem Terminal verbunden sind.
 ```
 
-#####  kill komutu ile de bu ID’ler kullanılarak işlem sonlandırılır:
+#####  Der Prozess wird beendet, indem diese IDs mit dem Kill-Befehl verwendet werden.:
 ```
 kill “ID”
 ```
 
 <hr>
 
-## head and tail Commands
+## head and tail Kommandos
 
-##### Belgenin ilk on satırını çıkarır:
+##### Gibt die ersten zehn Zeilen des Dokuments aus:
 ```
-head “dosya.txt” 
+head “datei.txt” 
 ```
 
-##### Belgenin son on satırını çıkarır:
+##### Extrahiert die letzten zehn Zeilen des Dokuments:
 ```
-tail “dosya.txt”  
+tail “datei.txt”  
 ```
 
 <hr>
 
-## head and tail Commands
+## head and tail Kommandos
 
-##### Bu komut diğer tüm komutların detaylı kullanımını açıklar:
+##### Dieser Befehl erklärt die detaillierte Verwendung aller anderen Befehle:
 ```
 man whoami
 ```
@@ -329,19 +329,19 @@ man whoami
 <hr>
 
 ## sort Kommando
-##### (Bu komut ile hem alfabetik hem de numerik sıralama yapılır. Dosyaları, dosya içeriklerini ve dizinleri sıralar. Sıralamayı case sensitive olarak yapar.)
+##### (Mit diesem Befehl wird sowohl alphabetisch als auch numerisch sortiert. Sortiert Dateien, Dateiinhalte und Verzeichnisse. Groß-/Kleinschreibung wird beim Sortieren beachtet)
 
-##### Çıktıyı ters olarak sıralar:
+##### Sortiert die Ausgabe in umgekehrter Reihenfolge:
 ```
 sort -r
 ```
 
-##### Çıktıyı case insensitive olarak sıralar:
+##### Sortiert die Ausgabe ohne Berücksichtigung der Groß-/Kleinschreibung:
 ```
 sort -f 
 ```
 
-##### Çıktıyı numerik olarak sıralar:
+##### Sortiert die Ausgabe numerisch:
 ```
 sort -n
 ```
@@ -350,16 +350,16 @@ sort -n
 
 ## chown Kommando
 
-##### Dosyaların sahipliğini değiştirir:
+##### Ändert den Besitz von Dateien:
 ```
-sudo chown “kullanıcı_veya_grup_adı” “dosya_adı”
+sudo chown “Benutzername_oder_Gruppenname” “Dateinamen”
 ```
 
 <hr>
 
 ## chmod Kommando
 
-##### Bu komut, dosya ve dizinlerin erişim izinlerini değiştirmek için kullanılır. Her bir basamak user, group ve others kullanıcılılarını temsil eder:
+##### Dieser Befehl wird verwendet, um die Zugriffsberechtigungen von Dateien und Verzeichnissen zu ändern. Jede Ziffer steht für Benutzer, Gruppe und andere:
 ```
 chmod 754 “dosya.txt”
 

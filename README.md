@@ -12,33 +12,33 @@ DevOps ve Networking İçin  Linux Komutları [![Awesome](https://cdn.rawgit.com
 2. [Turkish Linux Cheat Sheet](https://github.com/arslanbilal/git-cheat-sheet/blob/master/other-sheets/git-cheat-sheet-tr.md)
 
 ### Index
-* [lsof Command](#lsof_command)
+* [lsof Komutu](#lsof_komutu)
 * [Groups and Users](#groups_and_users)
-* [id Command](#id_command)
-* [cat Command](#cat_command)
-* [diff Command](#diff_command)
-* [dd Command](#dd_command)
-* [route Command](#route_command)
-* [mtr Command](#mtr_command)
-* [nslookup ve dig Commands](#nslookup_ve_dig_commands)
-* [tcpdump Command](#tcpdump_command)
-* [sudo !! Command](#sudo_!!_command)
-* [wget Command](#wget_command)
-* [free Command](#free_command)
-* [tr Command](#tr_command)
-* [htop, ps ve kill Commands](#htop_ps_ve_kill_commands)
-* [head and tail Commands](#head_and_tail_commands)
-* [man Command](#man_command)
-* [sort Command](#sort_command)
-* [chown Command](#chown_command)
-* [chmod Command](#chmod_command)
+* [id Komutu](#id_komutu)
+* [cat Komutu](#cat_komutu)
+* [diff Komutu](#diff_komutu)
+* [dd Komutu](#dd_komutu)
+* [route Komutu](#route_komutu)
+* [mtr Komutu](#mtr_komutu)
+* [nslookup ve dig Komutları](#nslookup_ve_dig_komutları)
+* [tcpdump Komutu](#tcpdump_komutu)
+* [sudo !! Komutu](#sudo_!!_komutu)
+* [wget Komutu](#wget_komutu)
+* [free Komutu](#free_komutu)
+* [tr Komutu](#tr_komutu)
+* [htop, ps ve kill Komutları](#htop_ps_ve_kill_komutları)
+* [head and tail Komutları](#head_and_tail_komutları)
+* [man Komutu](#man_komutu)
+* [sort Komutu](#sort_komutu)
+* [chown Komutu](#chown_komutu)
+* [chmod Komutu](#chmod_komutu)
 
 <hr>
 
-## lsof Command 
-##### (lsof(List Of Open File) sistemdeki tüm çalışan dosyaları listeler.)
+## lsof Komutu 
+##### (lsof(List Of Open File) sistemdeki tüm çalışan dosyaları listeler)
 
-##### Belirtilen user tarafından açılmış dosyaları listeler.:
+##### Belirtilen user tarafından açılmış dosyaları listeler:
 ```
 lsof -u “user”
 ```
@@ -79,8 +79,8 @@ sudo usermod -g “groupname” “username”
 
 <hr>
 
-## id Command
-##### (User ve Grup numarik id’lerini listeler.)
+## id Komutu
+##### (User ve Grup numarik id’lerini listeler)
 
 ##### Mevcut grup id:
 ```
@@ -99,15 +99,15 @@ id -u
 
 <hr>
 
-## cat Command
-##### (Bu komut ile belgeleri okuyabilir, değiştirirebilir ve birleştirebiliriz.)
+## cat Komutu
+##### (Bu komut ile belgeleri okuyabilir, değiştirirebilir ve birleştirebiliriz)
 
 ##### test-1.txt ve test-2.txt belgelerini birleştirerek çıktısını verir:
 ```
 cat “test-1.txt” “test-2.txt” 
 ```
 
-##### Seçilen belgenenin tüm satırlarını numaralandırır:
+##### Seçilen belgenin tüm satırlarını numaralandırır:
 ```
 cat -b 
 ```
@@ -119,7 +119,7 @@ cat -n
 
 <hr>
 
-## diff Command
+## diff Komutu
 
 ##### Bu komut iki dosya arasındaki farkları listeler:
 ```
@@ -128,15 +128,15 @@ diff “test-1.txt” “test-2.txt”
 
 <hr>
 
-## dd Command
-##### (Bu komut belirtilen belge ve ya dizini belirtilen hedefe kopyalar. cpden farklı olarak byte-to-byte kopyalama işlemi yapar. Örneğin bir diskin başka bir diske kopyalamasını yaparken diskin tam bir replikasını oluşturur.(AWS snapshot gibi) Backup almakta kullanışlıdır.)
+## dd Komutu
+##### (Bu komut belirtilen belge ve ya dizini belirtilen hedefe kopyalar. cpden farklı olarak byte-to-byte kopyalama işlemi yapar. Örneğin bir diskin başka bir diske kopyalamasını yaparken diskin tam bir replikasını oluşturur.(AWS snapshot gibi) Backup almakta kullanışlıdır)
 
-##### Mountpoint1 diskini olduğu gibi Mountpoint2 diskine kopyalar:
+##### Mp1 diskini olduğu gibi Mp2 diskine kopyalar:
 ```
 dd if = /dev/mp1 of = /dev/mp2 
 ```
 
-##### Tüm commitleri görüntüler(Sadece commit hash ve commit mesajı görüntülenir.):
+##### Tüm commitleri görüntüler(Sadece commit hash ve commit mesajı görüntülenir):
 ```
 $ git log --oneline
 ```
@@ -148,36 +148,36 @@ dd conv=noerror if = /dev/mp1 of = /dev/mp2
 
 <hr>
 
-## route Command
+## route Komutu
 
 ##### Bulunduğumuz ağın route table bilgilerini listeler:
 ```
 route
 ```
 
-##### ICMP protokolünü kullanarak belirtilen hedefe gönderilen paketin kaç atlamada hedefe ulaştığını gösterir.:
+##### ICMP protokolünü kullanarak belirtilen hedefe gönderilen paketin kaç atlamada hedefe ulaştığını gösterir:
 ```
 traceroute google.com
 ```
 
 <hr>
 
-## mtr Command
-##### (mtr komutu ping ve traceroute komutlarını kombine eder. Gerçek zamanlı olarak gönderilen pakette gerçekleşen veri kayıplarını ve geçikme sürelerini detaylı olarak listeler.)
+## mtr Komutu
+##### (mtr komutu ping ve traceroute komutlarını kombine eder. Gerçek zamanlı olarak gönderilen pakette gerçekleşen veri kayıplarını ve geçikme sürelerini detaylı olarak listeler)
 
 ##### Gerçek zamanlı olarak listeler:
 ```
 mtr google.com 
 ```
 
-##### Hedefe sadece 10 paket atarak sonucu rapor halinde listeler. "-n" parametresi DNS çözümlemesini engeller.:
+##### Hedefe sadece 10 paket atarak sonucu rapor halinde listeler. "-n" parametresi DNS çözümlemesini engeller:
 ```
 mtr -n --report google.com
 ```
 
 <hr>
 
-## nslookup ve dig Commands
+## nslookup ve dig Komutları
 
 ##### Belirtilen adresin NS ve SOA kayıtlarını sıralar:
 ```
@@ -189,8 +189,8 @@ dig google.com
 
 <hr>
 
-## tcpdump Command
-##### (Makinada bulunan tüm network interface’lerin durumunu sorgular ve interfacelerden gönderilen paketleri yakalar.)
+## tcpdump Komutu
+##### (Makinada bulunan tüm network interface’lerin durumunu sorgular ve interfacelerden gönderilen paketleri yakalar)
 
 ##### Tüm arayüzleri listeler:
 ```
@@ -214,7 +214,7 @@ sudo tcpdump -i eth0 -c 10
 
 <hr>
 
-## sudo !! Command
+## sudo !! Komutu
 
 ##### Bu komut, komut satırında kendinden önce girilen komutu root izni ile tekrarlar:
 ```
@@ -223,7 +223,7 @@ sudo !!
 
 <hr>
 
-## wget Command
+## wget Komutu
 
 ##### Bu komut ile belirtilen web sayfası indirilir:
 ```
@@ -232,14 +232,14 @@ wget https://www.linkedin.com/in/mahmut-edip-negiz-6b1145213/
 
 <hr>
 
-## free Command
+## free Komutu
 
 ##### diskin kullanım durumunu listeler:
 ```
 free
 ```
 
-##### bytes olarak listeler:
+##### diskin kullanım durumunu byte olarak listeler:
 ```
 free -b
 ```
@@ -261,7 +261,7 @@ free -g
 
 <hr>
 
-## tr Command
+## tr Komutu
 ##### (tr komutu ile belirtilen dosyanın içinde manipülasyonlar yapılabilir. Pipeler | kullanılarak daha karmaşık scriptler yazılabilir.)
 
 ##### deneme.txt içindeki tüm e’ler o olur:
@@ -281,14 +281,14 @@ cat deneme.txt | tr -d “i”
 
 <hr>
 
-## htop, ps ve kill Commands
+## htop, ps ve kill Komutları
 
 ##### htop gerçek zamanlı olarak cpu ve memory kullanımını gösterir. ps komutunun aksine mouse ile etkileşimlidir:
 ```
 htop
 ```
 
-#####  ps komutu da cpu ve memory kullanımını gösterir, htop komutunundan farklı olarak çıktıyı rapor haline sunar:
+#####  ps komutu da cpu ve memory kullanımını gösterir, htop komutundan farklı olarak çıktıyı rapor haline sunar:
 ```
 ps aux
 
@@ -304,7 +304,7 @@ kill “ID”
 
 <hr>
 
-## head and tail Commands
+## head and tail Komutları
 
 ##### Belgenin ilk on satırını çıkarır:
 ```
@@ -318,7 +318,7 @@ tail “dosya.txt”
 
 <hr>
 
-## head and tail Commands
+## head and tail Komutları
 
 ##### Bu komut diğer tüm komutların detaylı kullanımını açıklar:
 ```
@@ -327,8 +327,8 @@ man whoami
 
 <hr>
 
-## sort Command
-##### (Bu komut ile hem alfabetik hem de numerik sıralama yapılır. Dosyaları, dosya içeriklerini ve dizinleri sıralar. Sıralamayı case sensitive olarak yapar.)
+## sort Komutu
+##### (Bu komut ile hem alfabetik hem de numerik sıralama yapılır. Dosyaları, dosya içeriklerini ve dizinleri sıralar. Sıralamayı case sensitive olarak yapar)
 
 ##### Çıktıyı ters olarak sıralar:
 ```
@@ -347,7 +347,7 @@ sort -n
 
 <hr>
 
-## chown Command
+## chown Komutu
 
 ##### Dosyaların sahipliğini değiştirir:
 ```
@@ -356,7 +356,7 @@ sudo chown “kullanıcı_veya_grup_adı” “dosya_adı”
 
 <hr>
 
-## chmod Command
+## chmod Komutu
 
 ##### Bu komut, dosya ve dizinlerin erişim izinlerini değiştirmek için kullanılır. Her bir basamak user, group ve others kullanıcılılarını temsil eder:
 ```
