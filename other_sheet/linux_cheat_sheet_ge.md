@@ -2,7 +2,7 @@ Linux-Kommandos für DevOps und Netzwerke [![Awesome](https://cdn.rawgit.com/sin
 ===============
 <hr>
 <p align="center">
-	<img alt="Git" src="./Img/linux.svg" height="190" width="455">
+	<img alt="Git" src="../Img/linux.svg" height="190" width="455">
 </p>
 <hr>
 
