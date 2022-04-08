@@ -10,6 +10,7 @@ DevOps ve Networking İçin  Linux Komutları [![Awesome](https://cdn.rawgit.com
 
 1. [German Linux Cheat Sheet](https://github.com/medipnegiz/linux_cheat_sheet/tree/main/other_sheet/linux_cheat_sheet_ge.md)
 2. [English Linux Cheat Sheet](https://github.com/medipnegiz/linux_cheat_sheet/tree/main/other_sheet/linux_cheat_sheet_en.md)
+<hr>
 
 ### İçindekiler
 * [lsof Komutu](#lsof_komutu)
