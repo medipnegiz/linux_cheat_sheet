@@ -137,11 +137,6 @@ diff “test-1.txt” “test-2.txt”
 dd if = /dev/mp1 of = /dev/mp2 
 ```
 
-##### Tüm commitleri görüntüler(Sadece commit hash ve commit mesajı görüntülenir):
-```
-$ git log --oneline
-```
-
 ##### Eğer kopyalama işlemindeki hatalar gözardı edilmek isteniyorsa conv=noerror parametresi verilir:
 ```
 dd conv=noerror if = /dev/mp1 of = /dev/mp2
