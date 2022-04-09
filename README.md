@@ -31,9 +31,9 @@ DevOps ve Networking İçin  Linux Komutları [![Awesome](https://cdn.rawgit.com
 <hr>
 
 ## lsof Command 
-##### (lsof(List Of Open File) sistemdeki tüm çalışan dosyaları listeler.)
+##### lsof command stands for List Of Open File.
 
-##### Belirtilen user tarafından açılmış dosyaları listeler.:
+##### This command provides a list of files that are opened.:
 ```
 lsof -u “user”
 ```
@@ -42,32 +42,32 @@ lsof -u “user”
 
 ## Groups and Users
 
-##### Yeni bir User ekler:
+##### We use this command to create new users.:
 ```
 sudo useradd “username”
 ```
 
-##### Yeni User’ın şifresini oluşturur:
+##### The passwd command changes passwords for user accounts.:
 ```
 sudo passwd “username” 
 ```
 
-##### Belirtilen User’ı siler:
+##### Delete a user account and related files:
 ```
 sudo userdel “username” 
 ```
 
-##### Yeni bir grup oluşturur:
+##### We use groupadd command to create a new user group.:
 ```
 sudo groupadd “groupname” 
 ```
 
-##### Belirtilen grubu siler:
+##### groupdel command is used to delete a existing group.:
 ```
 sudo groupdel “groupname” 
 ```
 
-##### Belirtilen gruba belirtilen User’ı ekler:
+##### This command adds a user to a group.:
 ```
 sudo usermod -g “groupname” “username” 
 ```
@@ -75,19 +75,19 @@ sudo usermod -g “groupname” “username”
 <hr>
 
 ## id Command
-##### (User ve Grup numarik id’lerini listeler.)
+##### (This command is used to find out user and group names and numeric ID’s of the current user or any other user in the server.)
 
-##### Mevcut grup id:
+##### Print only the effective group id:
 ```
 id -g 
 ```
 
-##### Tüm grupların id’leri:
+##### Print all Group ID’s:
 ```
 id -G
 ```
 
-##### Mevcut user id:
+##### Prints only the effective user ID:
 ```
 id -u 
 ```
@@ -95,19 +95,19 @@ id -u
 <hr>
 
 ## cat Command
-##### (Bu komut ile belgeleri okuyabilir, değiştirirebilir ve birleştirebiliriz.)
+##### ( It reads data from the file and gives their content as output. It helps us to create, view, concatenate files.)
 
-##### test-1.txt ve test-2.txt belgelerini birleştirerek çıktısını verir:
+##### This will show the content of test1.txt and test2.txt:
 ```
 cat “test-1.txt” “test-2.txt” 
 ```
 
-##### Seçilen belgenenin tüm satırlarını numaralandırır:
+##### Number nonempty output lines:
 ```
 cat -b 
 ```
 
-##### Seçilen belgenin boş olmayan satırlarını da numaralandırır:
+##### Number all output lines:
 ```
 cat -n 
 ```
@@ -116,7 +116,7 @@ cat -n
 
 ## diff Command
 
-##### Bu komut iki dosya arasındaki farkları listeler:
+##### To compare the content of two files line by line:
 ```
 diff “test-1.txt” “test-2.txt”
 ```
@@ -124,19 +124,15 @@ diff “test-1.txt” “test-2.txt”
 <hr>
 
 ## dd Command
-##### (Bu komut belirtilen belge ve ya dizini belirtilen hedefe kopyalar. cpden farklı olarak byte-to-byte kopyalama işlemi yapar. Örneğin bir diskin başka bir diske kopyalamasını yaparken diskin tam bir replikasını oluşturur.(AWS snapshot gibi) Backup almakta kullanışlıdır.)
+##### (This tool is mainly used for copying and converting data, hence it stands for data duplicator.  This tool can be also used for: Backing up and restoring an entire hard drive or a partition.Create .ISO from CD/DVD)
 
-##### Mountpoint1 diskini olduğu gibi Mountpoint2 diskine kopyalar:
+##### To copy Mountpoint1 to Mountpoint2 :
 ```
 dd if = /dev/mp1 of = /dev/mp2 
 ```
 
-##### Tüm commitleri görüntüler(Sadece commit hash ve commit mesajı görüntülenir.):
-```
-$ git log --oneline
-```
 
-##### Eğer kopyalama işlemindeki hatalar gözardı edilmek isteniyorsa conv=noerror parametresi verilir:
+##### If there are read errors while reading the source, we use conv=sync,noerror to prevent dd from stopping on error and performing a dump-:
 ```
 dd conv=noerror if = /dev/mp1 of = /dev/mp2
 ```
@@ -145,12 +141,12 @@ dd conv=noerror if = /dev/mp1 of = /dev/mp2
 
 ## route Command
 
-##### Bulunduğumuz ağın route table bilgilerini listeler:
+##### Route command is used to show/manipulate the IP routing table.:
 ```
 route
 ```
 
-##### ICMP protokolünü kullanarak belirtilen hedefe gönderilen paketin kaç atlamada hedefe ulaştığını gösterir.:
+##### traceroute command in Linux prints the route that a packet takes to reach the host.:
 ```
 traceroute google.com
 ```
@@ -158,14 +154,14 @@ traceroute google.com
 <hr>
 
 ## mtr Command
-##### (mtr komutu ping ve traceroute komutlarını kombine eder. Gerçek zamanlı olarak gönderilen pakette gerçekleşen veri kayıplarını ve geçikme sürelerini detaylı olarak listeler.)
+##### (Mtr(my traceroute) is a command line network diagnostic tool that provides the functionality of both the ping and traceroute commands.)
 
-##### Gerçek zamanlı olarak listeler:
+##### View traceroute report in real time:
 ```
 mtr google.com 
 ```
 
-##### Hedefe sadece 10 paket atarak sonucu rapor halinde listeler. "-n" parametresi DNS çözümlemesini engeller.:
+##### It only throws 10 packets at the target and lists the result as a report. The -n parameter blocks DNS resolution:
 ```
 mtr -n --report google.com
 ```
@@ -174,7 +170,7 @@ mtr -n --report google.com
 
 ## nslookup ve dig Commands
 
-##### Belirtilen adresin NS ve SOA kayıtlarını sıralar:
+##### Sorts the NS and SOA records of the given address:
 ```
 nslookup github.com
 ```
@@ -185,24 +181,24 @@ dig google.com
 <hr>
 
 ## tcpdump Command
-##### (Makinada bulunan tüm network interface’lerin durumunu sorgular ve interfacelerden gönderilen paketleri yakalar.)
+##### (It queries the status of all network interfaces on the machine and captures the packets sent from the interfaces.)
 
-##### Tüm arayüzleri listeler:
+##### Lists all interfaces:
 ```
 sudo tcpdump --list-interfaces
 ```
 
-##### Tüm arayüzlerin paket iletimini dinler:
+##### To capture the packets of current network interface:
 ```
 sudo tcpdump
 ```
 
-##### Belirtilen arayüzün paket iletimini dinler:
+##### To capture packets from a specific network interface:
 ```
 sudo tcpdump -i eth0
 ```
 
-##### Paket dinleme işlemini 10 ile sınırlar:
+##### To capture specific number of packets:
 ```
 sudo tcpdump -i eth0 -c 10 
 ```
@@ -211,7 +207,7 @@ sudo tcpdump -i eth0 -c 10
 
 ## sudo !! Command
 
-##### Bu komut, komut satırında kendinden önce girilen komutu root izni ile tekrarlar:
+##### This command repeats the command previously entered on the command line with root privileges:
 ```
 sudo !!
 ```
@@ -220,7 +216,7 @@ sudo !!
 
 ## wget Command
 
-##### Bu komut ile belirtilen web sayfası indirilir:
+##### This command will download the resource specified in the [url] to the current directory.:
 ```
 wget https://www.linkedin.com/in/mahmut-edip-negiz-6b1145213/
 ```
@@ -229,27 +225,27 @@ wget https://www.linkedin.com/in/mahmut-edip-negiz-6b1145213/
 
 ## free Command
 
-##### diskin kullanım durumunu listeler:
+##### Command will shows below memory information. Running it without an option will show you a default view with kilobyte units.:
 ```
 free
 ```
 
-##### bytes olarak listeler:
+##### view with bytes :
 ```
 free -b
 ```
 
-#####  kilobytes olarak listeler (default):
+#####  view with kilobytes (default):
 ```
 free -k
 ```
 
-##### megabytes olarak listeler:
+##### view with megabytes :
 ```
 free -m
 ```
 
-##### gigabytes olarak listeler:
+##### view with gigabytes :
 ```
 free -g
 ```
@@ -257,42 +253,42 @@ free -g
 <hr>
 
 ## tr Command
-##### (tr komutu ile belirtilen dosyanın içinde manipülasyonlar yapılabilir. Pipeler | kullanılarak daha karmaşık scriptler yazılabilir.)
+##### (The ‘tr’ in tr command stands for translation. This command is used for translating one type of characters into another. )
 
-##### deneme.txt içindeki tüm e’ler o olur:
+##### convert all 'e's in text to 'o':
 ```
 cat deneme.txt | tr “e” “o” 
 ```
 
-#####  deneme.txt içindeki tüm küçük harfler BÜYÜK olur:
+#####  convert lowercase to uppercase:
 ```
 cat deneme.txt | tr “[a-z]” “[A-Z]”
 ```
 
-#####  deneme.txt içindeki tüm i’ler silinir:
+#####  to delete spesific character(s) :
 ```
 cat deneme.txt | tr -d “i” 
 ```
 
 <hr>
 
-## htop, ps ve kill Commands
+## htop, ps and kill Commands
 
-##### htop gerçek zamanlı olarak cpu ve memory kullanımını gösterir. ps komutunun aksine mouse ile etkileşimlidir:
+##### htop is a linux application used for real-time process (cpu and memory) monitoring.:
 ```
 htop
 ```
 
-#####  ps komutu da cpu ve memory kullanımını gösterir, htop komutunundan farklı olarak çıktıyı rapor haline sunar:
+#####  ps is used for real-time process (cpu and memory) monitoring too. The difference is reporting the output:
 ```
 ps aux
 
-a = Tüm kullanıcıların işlemlerini gösterir.
-u = İşlemin sahibini gösterir.
-x = Terminale bağlı olmayan işlemleri gösterir.
+a = Shows the transactions of all users.
+u = Displays the owner of the action.
+x = Displays processes not connected to the terminal.
 ```
 
-#####  kill komutu ile de bu ID’ler kullanılarak işlem sonlandırılır:
+#####  The kill command will kill a single process at a time with the given process ID. :
 ```
 kill “ID”
 ```
@@ -301,41 +297,41 @@ kill “ID”
 
 ## head and tail Commands
 
-##### Belgenin ilk on satırını çıkarır:
+#####  The 'head' command displays the starting content of a file. By default, it displays starting 10 lines of any file:
 ```
-head “dosya.txt” 
+head “file.txt” 
 ```
 
-##### Belgenin son on satırını çıkarır:
+##### The Linux tail command displays data from the end of a file.:
 ```
-tail “dosya.txt”  
+tail “file.txt”  
 ```
 
 <hr>
 
-## head and tail Commands
+## whoAMI Command
 
-##### Bu komut diğer tüm komutların detaylı kullanımını açıklar:
+##### It displays the username of the current user when this command is invoked:
 ```
-man whoami
+whoami
 ```
 
 <hr>
 
 ## sort Command
-##### (Bu komut ile hem alfabetik hem de numerik sıralama yapılır. Dosyaları, dosya içeriklerini ve dizinleri sıralar. Sıralamayı case sensitive olarak yapar.)
+##### (The sort command arranges text lines in useful ways. This simple tool can help you quickly sort information from the command line.)
 
-##### Çıktıyı ters olarak sıralar:
+##### Sort in reverse order:
 ```
 sort -r
 ```
 
-##### Çıktıyı case insensitive olarak sıralar:
+##### Ignore case while sorting:
 ```
 sort -f 
 ```
 
-##### Çıktıyı numerik olarak sıralar:
+##### Sort on numerical value:
 ```
 sort -n
 ```
@@ -344,18 +340,18 @@ sort -n
 
 ## chown Command
 
-##### Dosyaların sahipliğini değiştirir:
+##### Change ownership of files:
 ```
-sudo chown “kullanıcı_veya_grup_adı” “dosya_adı”
+sudo chown “user_or_group_name” “file_name”
 ```
 
 <hr>
 
 ## chmod Command
 
-##### Bu komut, dosya ve dizinlerin erişim izinlerini değiştirmek için kullanılır. Her bir basamak user, group ve others kullanıcılılarını temsil eder:
+##### This command is used to change the access permissions of files and directories. Each digit represents user, group, and others:
 ```
-chmod 754 “dosya.txt”
+chmod 754 “file.txt”
 
 4 →read(r) permission
 2 → write(w) permission
