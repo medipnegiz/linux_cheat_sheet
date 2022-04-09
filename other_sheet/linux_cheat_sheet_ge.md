@@ -309,7 +309,7 @@ tail “datei.txt”
 
 <hr>
 
-## head and tail Kommandos
+## man Kommando
 
 ##### Dieser Befehl erklärt die detaillierte Verwendung aller anderen Befehle:
 ```
