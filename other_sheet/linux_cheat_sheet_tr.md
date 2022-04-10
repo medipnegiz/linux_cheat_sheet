@@ -309,7 +309,7 @@ tail “dosya.txt”
 
 <hr>
 
-## head and tail Komutları
+## man Komutu
 
 ##### Bu komut diğer tüm komutların detaylı kullanımını açıklar:
 ```
