@@ -6,7 +6,7 @@ Linux Commands for DevOps and Networking [![Awesome](https://cdn.rawgit.com/sind
 </p>
 <hr>
 
-# Diğer Mevcut Diller:
+# Other Available Languages:
 
 1. [German Linux Cheat Sheet](https://github.com/medipnegiz/linux_cheat_sheet/tree/main/other_sheet/linux_cheat_sheet_ge.md)
 2. [Turkish Linux Cheat Sheet](https://github.com/medipnegiz/linux_cheat_sheet/tree/main/other_sheet/linux_cheat_sheet_tr.md)
