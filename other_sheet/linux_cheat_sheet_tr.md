@@ -2,7 +2,7 @@ DevOps ve Networking İçin  Linux Komutları [![Awesome](https://cdn.rawgit.com
 ===============
 <hr>
 <p align="center">
-	<img alt="Git" src="./Img/linux.svg" height="190" width="455">
+	<img alt="Git" src="../Img/linux.svg" height="190" width="455">
 </p>
 <hr>
 
