@@ -253,7 +253,7 @@ free -g
 <hr>
 
 ## tr Komutu
-##### (tr komutu ile belirtilen dosyanın içinde manipülasyonlar yapılabilir. Pipeler | kullanılarak daha karmaşık scriptler yazılabilir.)
+##### (tr komutu ile belirtilen dosyanın içinde manipülasyonlar yapılabilir. Pipeler | kullanılarak daha karmaşık scriptler yazılabilir)
 
 ##### deneme.txt içindeki tüm e’ler o olur:
 ```
