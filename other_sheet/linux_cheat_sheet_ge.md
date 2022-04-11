@@ -125,7 +125,7 @@ diff “test-1.txt” “test-2.txt”
 <hr>
 
 ## dd Kommando
-##### (Dieser Befehl kopiert das angegebene Dokument oder Verzeichnis an das angegebene Ziel. Im Gegensatz zu cp kopiert es Byte-zu-Byte. Wenn Sie beispielsweise eine Festplatte auf eine andere Festplatte kopieren, wird eine exakte Kopie der Festplatte erstellt (wie ein AWS-Snapshot).)
+##### (Dieser Befehl kopiert das angegebene Dokument oder Verzeichnis an das angegebene Ziel. Im Gegensatz zu cp kopiert es Byte-zu-Byte. Wenn Sie beispielsweise eine Festplatte auf eine andere Festplatte kopieren, wird eine exakte Kopie der Festplatte erstellt (wie ein AWS-Snapshot))
 
 ##### Kopiert Mp1-Disc auf Mp2-Disc wie sie ist:
 ```
@@ -216,7 +216,7 @@ sudo !!
 
 ## wget Kommando
 
-##### Mit diesem Befehl wird die angegebene Webseite heruntergeladen.:
+##### Mit diesem Befehl wird die angegebene Webseite heruntergeladen:
 ```
 wget https://www.linkedin.com/in/mahmut-edip-negiz-6b1145213/
 ```
@@ -279,7 +279,7 @@ cat test.txt | tr -d “i”
 htop
 ```
 
-#####  Der Befehl ps zeigt auch die CPU- und Speicherauslastung an, im Gegensatz zum Befehl htop meldet er die Ausgabe.:
+#####  Der Befehl ps zeigt auch die CPU- und Speicherauslastung an, im Gegensatz zum Befehl htop meldet er die Ausgabe:
 ```
 ps aux
 
@@ -288,7 +288,7 @@ u = Zeigt den Eigentümer der Aktion an.
 x = Zeigt Prozesse an, die nicht mit dem Terminal verbunden sind.
 ```
 
-#####  Der Prozess wird beendet, indem diese IDs mit dem Kill-Befehl verwendet werden.:
+#####  Der Prozess wird beendet, indem diese IDs mit dem Kill-Befehl verwendet werden:
 ```
 kill “ID”
 ```
