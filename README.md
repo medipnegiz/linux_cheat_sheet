@@ -6,13 +6,13 @@ Linux Commands for DevOps and Networking [![Awesome](https://cdn.rawgit.com/sind
 </p>
 <hr>
 
-# Other Available Languages:
-
+# Other Available Languages: 
 1. [German Linux Cheat Sheet](https://github.com/medipnegiz/linux_cheat_sheet/tree/main/other_sheet/linux_cheat_sheet_ge.md)
 2. [Turkish Linux Cheat Sheet](https://github.com/medipnegiz/linux_cheat_sheet/tree/main/other_sheet/linux_cheat_sheet_tr.md)
 <hr>
 
-### Index
+### Index 📜
+
 * [lsof Command](#lsof-command)
 * [Groups and Users](#groups-and-users)
 * [id Command](#id-command)
@@ -23,11 +23,11 @@ Linux Commands for DevOps and Networking [![Awesome](https://cdn.rawgit.com/sind
 * [mtr Command](#mtr-command)
 * [nslookup ve dig Commands](#nslookup-ve-dig-commands)
 * [tcpdump Command](#tcpdump-command)
-* [sudo !! Command](#sudo-!!-command)
+* [sudo Command](#sudo-command)
 * [wget Command](#wget-command)
 * [free Command](#free-command)
 * [tr Command](#tr-command)
-* [htop, ps ve kill Commands](#htop-ps-ve-kill-commands)
+* [htop ps ve kill Commands](#htop-ps-ve-kill-commands)
 * [head and tail Commands](#head-and-tail-commands)
 * [man Command](#man-command)
 * [sort Command](#sort-command)
