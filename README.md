@@ -14,7 +14,7 @@ Linux Commands for DevOps and Networking [![Awesome](https://cdn.rawgit.com/sind
 
 ### Index
 * [lsof Command](#lsof_command)
-* [Groups and Users](#groups_and_users)
+* [Groups and Users](#groups-and-users)
 * [id Command](#id_command)
 * [cat Command](#cat_command)
 * [diff Command](#diff_command)
