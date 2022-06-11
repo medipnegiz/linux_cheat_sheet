@@ -27,7 +27,7 @@ Linux Commands for DevOps and Networking [![Awesome](https://cdn.rawgit.com/sind
 * [wget Command](#wget-command)
 * [free Command](#free-command)
 * [tr Command](#tr-command)
-* [htop ps and kill Commands](#htop-ps-and-kill-commands)
+* [htop, ps and kill Commands](#htop-ps-and-kill-commands)
 * [head and tail Commands](#head-and-tail-commands)
 * [man Command](#man-command)
 * [sort Command](#sort-command)
@@ -278,7 +278,7 @@ cat deneme.txt | tr -d “i”
 
 <hr>
 
-## htop ps and kill Commands
+## htop, ps and kill Commands
 
 ##### htop is a linux application used for real-time process (cpu and memory) monitoring:
 ```
