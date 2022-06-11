@@ -11,7 +11,7 @@ Linux Commands for DevOps and Networking [![Awesome](https://cdn.rawgit.com/sind
 2. [Turkish Linux Cheat Sheet](https://github.com/medipnegiz/linux_cheat_sheet/tree/main/other_sheet/linux_cheat_sheet_tr.md)
 <hr>
 
-### Index 📜
+## Index 
 
 * [lsof Command](#lsof-command)
 * [Groups and Users](#groups-and-users)
@@ -27,7 +27,7 @@ Linux Commands for DevOps and Networking [![Awesome](https://cdn.rawgit.com/sind
 * [wget Command](#wget-command)
 * [free Command](#free-command)
 * [tr Command](#tr-command)
-* [htop ps ve kill Commands](#htop-ps-ve-kill-commands)
+* [htop ps and kill Commands](#htop-ps-and-kill-commands)
 * [head and tail Commands](#head-and-tail-commands)
 * [man Command](#man-command)
 * [sort Command](#sort-command)
@@ -211,7 +211,7 @@ sudo tcpdump -i eth0 -c 10
 
 <hr>
 
-## sudo !! Command
+## sudo Command
 
 ##### This command repeats the command previously entered on the command line with root privileges:
 ```
@@ -278,7 +278,7 @@ cat deneme.txt | tr -d “i”
 
 <hr>
 
-## htop, ps and kill Commands
+## htop ps and kill Commands
 
 ##### htop is a linux application used for real-time process (cpu and memory) monitoring:
 ```
@@ -364,3 +364,5 @@ chmod 754 “file.txt”
 1 → execute(x) permission
 0 → no permission
 ```
+
+### Go to [Index](#index)
