@@ -7,7 +7,7 @@ DevOps ve Networking için Linux Komutları [![Awesome](https://cdn.rawgit.com/s
 <hr>
 
 
-### İçindekiler
+### Icindekiler
 * [lsof Komutu](#lsof-komutu)
 * [Groups and Users](#groups-and-users)
 * [id Komutu](#id-komutu)
@@ -18,7 +18,7 @@ DevOps ve Networking için Linux Komutları [![Awesome](https://cdn.rawgit.com/s
 * [mtr Komutu](#mtr-komutu)
 * [nslookup ve dig Komutları](#nslookup-ve-dig-komutları)
 * [tcpdump Komutu](#tcpdump-komutu)
-* [sudo !! Komutu](#sudo-!!-komutu)
+* [sudo Komutu](#sudo-komutu)
 * [wget Komutu](#wget-komutu)
 * [free Komutu](#free-komutu)
 * [tr Komutu](#tr-komutu)
@@ -205,7 +205,7 @@ sudo tcpdump -i eth0 -c 10
 
 <hr>
 
-## sudo !! Komutu
+## sudo Komutu
 
 ##### Bu komut, komut satırında kendinden önce girilen komutu root izni ile tekrarlar:
 ```
@@ -358,3 +358,5 @@ chmod 754 “dosya.txt”
 1 → execute(x) permission
 0 → no permission
 ```
+
+## Git [Icindekiler](#icindekiler)
