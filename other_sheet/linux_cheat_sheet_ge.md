@@ -16,14 +16,14 @@ Linux-Kommandos für DevOps und Netzwerke [![Awesome](https://cdn.rawgit.com/sin
 * [dd Kommando](#dd-kommando)
 * [route Kommando](#route-kommando)
 * [mtr Kommando](#mtr-kommando)
-* [nslookup ve dig Kommandos](#nslookup-ve-dig-kommandos)
+* [nslookup und dig Kommandos](#nslookup-und-dig-kommandos)
 * [tcpdump Kommando](#tcpdump-kommando)
-* [sudo !! Kommando](#sudo-!!-kommando)
+* [sudo Kommando](#sudo-kommando)
 * [wget Kommando](#wget-kommando)
 * [free Kommando](#free-kommando)
 * [tr Kommando](#tr-kommando)
-* [htop, ps ve kill Kommandos](#htop-ps-ve-kill-kommandos)
-* [head and tail Kommandos](#head-and-tail-kommandos)
+* [htop, ps und kill Kommandos](#htop-ps-und-kill-kommandos)
+* [head und tail Kommandos](#head-und-tail-kommandos)
 * [man Kommando](#man-kommando)
 * [sort Kommando](#sort-kommando)
 * [chown Kommando](#chown-kommando)
@@ -168,7 +168,7 @@ mtr -n --report google.com
 
 <hr>
 
-## nslookup ve dig Kommandos
+## nslookup und dig Kommandos
 
 ##### Sortiert die NS- und SOA-Einträge der angegebenen Adresse:
 ```
@@ -205,7 +205,7 @@ sudo tcpdump -i eth0 -c 10
 
 <hr>
 
-## sudo !! Kommando
+## sudo Kommando
 
 ##### Dieser Befehl wiederholt den davor auf der Kommandozeile eingegebenen Befehl mit Root-Berechtigung:
 ```
@@ -272,7 +272,7 @@ cat test.txt | tr -d “i”
 
 <hr>
 
-## htop, ps ve kill Kommandos
+## htop, ps und kill Kommandos
 
 ##### htop zeigt die CPU- und Speicherauslastung in Echtzeit an. Anders als der Befehl ps ist er interaktiv mit der Maus:
 ```
@@ -295,7 +295,7 @@ kill “ID”
 
 <hr>
 
-## head and tail Kommandos
+## head und tail Kommandos
 
 ##### Gibt die ersten zehn Zeilen des Dokuments aus:
 ```
@@ -358,3 +358,5 @@ chmod 754 “dosya.txt”
 1 → execute(x) permission
 0 → no permission
 ```
+
+## Geh zum [Index](#index)
