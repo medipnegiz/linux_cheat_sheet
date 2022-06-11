@@ -365,4 +365,4 @@ chmod 754 “file.txt”
 0 → no permission
 ```
 
-### Go to [Index](#index)
+## Go to [Index](#index)
